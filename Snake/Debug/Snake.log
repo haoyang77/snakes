@@ -1,21 +1,21 @@
 ﻿  snake.cpp
 c:\project\c++_project\snake\snake\snake.cpp(39): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\project\c++_project\snake\snake\snake.cpp(131): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+c:\project\c++_project\snake\snake\snake.cpp(146): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-c:\project\c++_project\snake\snake\snake.cpp(132): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+c:\project\c++_project\snake\snake\snake.cpp(147): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-c:\project\c++_project\snake\snake\snake.cpp(154): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+c:\project\c++_project\snake\snake\snake.cpp(169): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-c:\project\c++_project\snake\snake\snake.cpp(155): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+c:\project\c++_project\snake\snake\snake.cpp(170): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float

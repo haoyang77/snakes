@@ -63,6 +63,7 @@ int main()
 
 	sf::RectangleShape bonus(sf::Vector2f(10, 10));
 	bonus.setFillColor(sf::Color::Red);
+	bonus.setPosition(350, 300);
 	bool change_position = true;
 
 
@@ -87,13 +88,15 @@ int main()
 
 		window.clear();
 
+		
+
+		change_position = add_point(bonus, square, point, tails);
+
 		if (change_position)
 		{
 			set_bonus_position(bonus, MAP_WIDTH, MAP_HEIGHT);
 			change_position = false;
 		}
-
-		change_position = add_point(bonus, square, point, tails);
 
 		determine_direction(direction);
 		move_square(square, MAP_WIDTH, MAP_HEIGHT,direction, tails);
@@ -104,16 +107,28 @@ int main()
 		
 
 
-		
-		for (auto &i : tails)
-			window.draw(i);
+		auto d_start = tails.end();
+		for (auto i = tails.begin(); i != tails.end(); ++i)
+		{
+			if ((*i).getPosition() == square.getPosition())
+			{
+				d_start = i;
+				break;
+			}
+			else
+				window.draw(*i);
+		}
+
+		tails.erase(d_start, tails.end());
+
+
 		window.draw(bonus);
 		window.draw(square);
 
 		window.display();
 
 		//Lower the refresh rate
-		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+		std::this_thread::sleep_for(std::chrono::milliseconds(70));
 		
 	}
 
